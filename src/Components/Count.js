@@ -30,7 +30,12 @@ export class Count extends Component {
         this.setState({count :this.state.count + 1})
     })
     decrement= (() =>{
-        this.setState({count :this.state.count - 1})
+        if (this.state.count > 0) {
+            this.setState({count :this.state.count - 1})
+        }else {
+            console.log('Be carfull')
+        }
+        
     })
     
     render() {
